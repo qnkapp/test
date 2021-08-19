@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>Voici le détail complet des sessions disponibles pour la formation {{ data.nom }} </h2>
+    <div *ngFor='let sf of sessionFormation'>
+        <div class="card p-3">
+            <div class="row">
+                <div class="col-sm-3">
+                    {{sf.formation.nom}}
+                </div>
+                <div class="col-sm-3">
+                    {{sf.dateDebut | date : 'dd/MM/yyyy'}}
+                </div>
+                <div class="col-sm-3">
+                    {{sf.dateFin | date : 'dd/MM/yyyy'}}
+                </div>
+                <div class="col-sm-3 text-center">
+                    {{sf.nbPlace}}
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
